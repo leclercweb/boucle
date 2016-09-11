@@ -1,43 +1,62 @@
 <!DOCTYPE>
 
-<html lang="fr">
-
+<html>
 			<head>
+			 <link rel="stylesheet" href="stylesheet.css">
 			<head>
 
 
-
-	<body style="margin: auto;">
+<body>
 
 		<center>
 
 
-
-<?php 
-include "header.php";
-?>
+	<?php 
+	include "header.php";
+	?>
 			
-				
-			
-
-	<div style="margin: 0;">
 	
-	
-<?php 
-include "tableau.php";
-?>
-	
-			
-	</div>
 
 
+<!----------------------MISE EN FORME----------------------------------->	
+	
+<table>
+			<?php             
+    			include('tableau.php');
+    			foreach ($spectacle as $clef)    
+    			{
+			?>
+   	 <tr>
+			<?php
+       			 foreach ($clef as $valeur =>$element) {
+			?>     
+
+        <td class="lien">
+			<?php           
+			echo $element." ";
+			?>      
+
+  
+	</td>
+			<?php    
+ 			}         
+			?>     
+
+ 
+        </tr>
+			<?php 
+   	 		}
+			?>
+
+</table>
+	
+<!----------------------FIN MISE EN FORME----------------------------------->			
 
 		</center>
 
-<?php 
-include "footer.php";
-?>
-	</body>
-
-
+	<?php 
+	include "footer.php";
+	?>
+	
+</body>
 </html>
